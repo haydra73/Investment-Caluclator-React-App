@@ -1,0 +1,122 @@
+.header {
+  text-align: center;
+  padding-top: 3rem;
+
+}
+
+.header img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
+  background-color: transparent;
+}
+
+.header-logo {
+  fill: white;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.form {
+  padding: 2rem;
+  max-width: 40rem;
+  margin: 2rem auto;
+  border-radius: 8px;
+  background: rgba(0, 0,0, .2);
+  border: 1px solid rgba(225, 225, 255, .2);
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, .2);
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1.5rem;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 14px;
+  font-weight: medium;
+  text-transform: uppercase;
+  margin-left: 8px;
+  color: #808080;
+}
+
+.form input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid rgba(225, 225, 255, .2);
+  border-radius:  8px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 20px;
+  height: 46px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.button {
+  height: 46px;
+  width: 132px;
+  font-size: 16px;
+  border: none;
+  border-radius: 0.25rem;
+  background: linear-gradient(0deg, #0346a9, #1070ff);
+  color:white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all .2s;
+}
+
+.buttonAlt {
+  height: 46px;
+  width: 132px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+button:hover, .buttonAlt:hover {
+  transform: translateY(-4px);
+}
+
+
+.result {
+  max-width: 50rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  table-layout: fixed;
+  border-spacing: 1rem;
+  text-align: right;
+}
+
+.result thead {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.result tbody {
+  font-weight: normal;
+  font-size: 16px;
+  color: rgba(225, 225, 255, .8);
+}
+
+.error {
+  text-align: center;
+  margin: 0 auto;
+  color: rgba(225, 225, 255, .2);
+  font-size: 16px;
+  font-weight: medium;
+}
