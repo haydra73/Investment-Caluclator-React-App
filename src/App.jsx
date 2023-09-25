@@ -1,29 +1,24 @@
-import Header from './components/Header/Header';
-import UserInput from './components/UserInput/UserInput';
-import Table from './components/Table/Table';
-import './App.css'
-import { useState } from 'react';
+import Header from "./components/Header/Header";
+import UserInput from "./components/UserInput/UserInput";
+import Table from "./components/Table/Table";
+import "./App.css";
+import { useState } from "react";
 
 function App() {
-
   const [userInput, setUserInput] = useState(null);
- 
 
   const calculateHandler = (userInput) => {
-      setUserInput(userInput);
+    setUserInput(userInput);
   };
 
-  const yearlyData = []; 
+  const yearlyData = [];
 
-  if(userInput) {
-    console.log(userInput["current-savings"]);
+  if (userInput) {
+    let currentSavings = userInput["current-savings"];
+    const yearlyContribution = userInput["yearly-contribution"];
+    const expectedReturn = userInput["expected-return"] / 100;
+    const duration = userInput["duration"];
 
-    let currentSavings = userInput['current-savings']; 
-    const yearlyContribution = userInput['yearly-contribution'];
-    const expectedReturn = userInput['expected-return'] / 100;
-    const duration = userInput['duration'];
-  
-    
     for (let i = 0; i < duration; i++) {
       const yearlyInterest = currentSavings * expectedReturn;
       currentSavings += yearlyInterest + yearlyContribution;
@@ -40,12 +35,14 @@ function App() {
     <>
       <Header />
       <UserInput onCalculate={calculateHandler} />
-      
 
-      {!userInput && <p className='error'>No investments calculated yet!</p>}
-      {userInput && <Table data={yearlyData} initialInvestment={userInput["current-savings"]}/>}
-
-     
+      {!userInput && <p className="error">No investments calculated yet!</p>}
+      {userInput && (
+        <Table
+          data={yearlyData}
+          initialInvestment={userInput["current-savings"]}
+        />
+      )}
     </>
   );
 }
