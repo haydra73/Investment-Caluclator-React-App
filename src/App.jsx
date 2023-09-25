@@ -11,6 +11,10 @@ function App() {
     setUserInput(userInput);
   };
 
+  const resetHandler = () => {
+    setUserInput(null)
+  }
+
   const yearlyData = [];
 
   if (userInput) {
@@ -34,7 +38,7 @@ function App() {
   return (
     <>
       <Header />
-      <UserInput onCalculate={calculateHandler} />
+      <UserInput onCalculate={calculateHandler} onResetForm={resetHandler} />
 
       {!userInput && <p className="error">No investments calculated yet!</p>}
       {userInput && (

@@ -7,6 +7,7 @@
 html {
   padding: 0;
   margin: 0;
+  
 }
 
 body {
@@ -19,5 +20,20 @@ body {
    color: #e1eeeb;
 
   --first-color: #1070ff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #2e2e2e;
+  scrollbar-gutter: stable;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1070ff;
+  border-radius: 10px;
 }
 
