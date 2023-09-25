@@ -5,8 +5,6 @@ const currencyFormatter = new Intl.NumberFormat("en-US", {
 });
 
 const Table = (props) => {
-  console.log(props.data);
-  console.log(props.initialInvestment);
   return (
     <table className="result">
       <thead>

@@ -36,8 +36,6 @@ function App() {
     }
   }
 
-  console.log(yearlyData);
-
   return (
     <>
       <Header />
