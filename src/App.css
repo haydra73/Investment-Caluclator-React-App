@@ -30,6 +30,8 @@
   box-shadow: 0px 16px 24px rgba(0, 0, 0, .2);
 }
 
+
+
 .input-group {
   display: flex;
   justify-content: space-evenly;
@@ -55,6 +57,19 @@
   color: #fff;
   font-size: 20px;
   height: 46px;
+}
+@media screen and (width < 700px) {
+  .form {
+    margin: 2rem;
+  }
+
+  .form label {
+    font-size: 12px;
+  }
+
+  .form input {
+    font-size: 16px;
+  }
 }
 
 .actions {
@@ -125,6 +140,54 @@ button:hover, .buttonAlt:hover {
   
 }
 
+@media screen and (width < 700px) {
+  .result thead {
+    font-size: 14px;
+  }
+  .result tbody {
+    height: auto;
+    font-size: 14px;
+  }
+
+  .button {
+    font-size: 14px;
+  }
+
+  .buttonAlt {
+    font-size: 14px;
+  }
+}
+
+@media screen and (width < 500px) {
+  .header h1 {
+    font-size: 18px;
+  }
+
+  .result {
+    border-spacing: .5rem;
+  }
+  .result thead {
+    font-size: 12px;
+  }
+  .result tbody {
+    height: auto;
+    font-size: 12px;
+  }
+
+  .result tr {
+    margin: .4rem 0;
+  }
+
+  .form label {
+    font-size: 9px;
+  }
+
+  .form input {
+    font-size: 13px;
+  }
+}
+
+
 .table-body::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, .2);
   border-radius: 8px;
@@ -143,3 +206,5 @@ button:hover, .buttonAlt:hover {
   font-size: 16px;
   font-weight: medium;
 }
+
+
